@@ -1,10 +1,12 @@
 import random
 
-pw = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-pg = int(input("Berapa panjang password yang ingin dibuatkan?"))
-pe = ""
+def pass_make(pg) :
 
-for i in range(pg) :
-    pe = pe + random.choice(pw)
-    
-print(pe)
+    pw = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    pe = ""
+
+    for _ in range(pg) :
+        pe = pe + random.choice(pw)
+        
+    return pe
+
